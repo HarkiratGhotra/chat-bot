@@ -1,1 +1,10 @@
 /* Empty. Add your own CSS if you like */
+.bar-footer {
+    bottom: 25px;
+}
+.list {
+    width: 100%;
+}
+.container {
+    margin-top: 40px;
+}

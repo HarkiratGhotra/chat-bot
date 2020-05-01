@@ -1,3 +1,41 @@
-<div>
-    new directive
+<div class="container">
+    <div class="row responsive-sm" ng-repeat="chat in chats.responses track by $index">
+        <div class="col" ng-show="setDelay">{{chat}}</div>
+    </div>
+    <div>
+        <div ng-if="optionAdded">
+            {{optionAdded.label}}
+        </div>
+        <div ng-if="getResponse">
+            {{getResponse.responses[0]}}
+        </div>
+        <div ng-if="anotherResponse">
+            {{anotherResponse.responses[0]}}
+        </div>
+        <div ng-if="finalResponse">
+            {{finalResponse.responses[0]}}
+        </div>
+    </div>
+    <div class="main">
+        <!-- <div ng-repeat="chat in chats">
+            {{chat.message}}
+        </div> -->
+    </div>
+    <div class="bar bar-footer">
+        <div class="list">
+            <div class="" ng-if="!isOptionsAvailable" ng-repeat="option in chats.options track by $index">
+                <button ng-click="optionsSelected($index)">
+                    {{option.label}}
+                </button>
+            </div>
+            <div class="item item-input-inset" ng-if="anotherResponse.component">
+                <label class="item-input-wrapper">
+                    <input type="text" placeholder="Enter your input" ng-model="form.input">
+                </label>
+                <button class="button button-small" ng-click="submitInput(form.input)">
+                    Submit
+                </button>
+            </div>     
+        </div>
+    </div>
 </div>
