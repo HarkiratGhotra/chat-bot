@@ -9,28 +9,10 @@ export default [() => {
 			$scope.form = {
 				input:''
 			}
-			$http.get('http://localhost:3000/api/courses').then(function(data) {
+			$http.get('http://localhost:3000/api/conversation').then(function(data) {
 				console.log(data)
-				$scope.phones = data;
+				$scope.chats = data.data.units[0];
 			 });
-			$scope.chats = sampleJson.units[0];
-			$scope.message = true;
-            // $scope.chats =[{
-			// 	message:'Hello, I am Yuper'
-			// },
-			// {
-			// 	message:'How are you today?'
-			// }]
-			$scope.sendMessage = () => {
-				console.log("hello")
-			}
-
-			$scope.setDelay = function(){
-				$scope.delay = true;
-				$timeout(function(){
-					$scope.delay = false;
-				}, 2000);
-			};
 
 			$scope.optionsSelected = (index) => {
 				$scope.optionAdded = sampleJson.units[0].options[index];
