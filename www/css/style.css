@@ -1,11 +1,6 @@
 /* Empty. Add your own CSS if you like */
-.bar-footer {
-    bottom: 25px;
+body {
+    font-family: "NewsGothic",sans-serif !important;
+    min-width: 320px;
+    background-color: #f2f2f2;
 }
-.list {
-    width: 100%;
-}
-.container {
-    margin-top: 40px;
-}
-

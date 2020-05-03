@@ -8,23 +8,24 @@ export default [() => {
 				input:''
             }
             $scope.hideOptions = false;
+            let chatData;
             $scope.chatList = [];
-			$http.get('http://localhost:3000/api/conversation').then(function(result) {
+			$http.get('http://localhost:3000/api/conversation').then((result) => {
                 $scope.initialChat = result.data.units[0];
-                $scope.chatList = [...$scope.initialChat.responses];
-			 });
+                chatData = result.data;
+             });
 
 			$scope.updateChat = (index) => {
                 $scope.selectedOption = $scope.initialChat.options[index];
-                $scope.chatList.push($scope.selectedOption.label);
                 $scope.hideOptions = true;
+                $scope.hasUserSelectedOption = true;
             };
             $scope.getNextResponse = (id) => {
-                $http.get("http://localhost:3000/api/conversation/" + id).then(function(data) {
+                $http.get("http://localhost:3000/api/conversation/" + id).then((data) => {
                     $scope.updatedResult = data.data;
                     $scope.chatList.push($scope.updatedResult.responses[0]);
                 });
-            }
+            };
             
             $scope.$watch('hideOptions',(nv, ov) => {
                 if(nv != ov) {
@@ -37,11 +38,11 @@ export default [() => {
             $scope.$watch('updatedResult',(nv,ov) => {
                 if(nv != ov && !nv.component) {
                     $scope.getNextResponse(nv.nextUnit);
-                }
+                };
             });
 
-			$scope.submitInput = (input) => {
-				if(input.length <=20 ) {
+			$scope.submitReply = (input) => {
+				if(input.length <= 20 ) {
 					$scope.expression = 'input.length <= 20';
 				}else {
 					$scope.expression = 'input.length > 20';
@@ -55,9 +56,9 @@ export default [() => {
                     },
                     data:{ 'response' : input }
                 }).then((result) =>{
-                    $scope.chatData = result.data;
+                    chatData = result.data;
                     if($scope.updatedResult && $scope.updatedResult.component) {
-                        $scope.endResponse = $scope.chatData.units.find(item => {
+                        $scope.lastResponse = chatData.units.find(item => {
                             if(item.id === $scope.updatedResult.component.nextUnit){
                                 item.condition.find(item => {
                                     if(item.expression === $scope.expression) {
@@ -71,8 +72,8 @@ export default [() => {
                         })
                     };
 
-                    if($scope.endResponse && !$scope.endResponse.nextUnit) {
-                        $scope.repliedMessage = $scope.chatData.units.slice(-1)[0].reply;
+                    if($scope.lastResponse && !$scope.lastResponse.nextUnit) {
+                        $scope.repliedMessage = chatData.units.slice(-1)[0].reply;
                     }else{
                         $scope.repliedMessage = '';
                     }
