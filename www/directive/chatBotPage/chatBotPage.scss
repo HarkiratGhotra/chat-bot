@@ -1,0 +1,38 @@
+.reply {
+    flex-direction: row-reverse;
+    .col:first-of-type {
+        background: green !important;
+    }
+}
+
+.has-header {
+    padding: 0 12px;
+    .row {
+        margin-bottom: 10px;
+        .col:first-of-type {
+            font-weight: 600;
+            width: auto;
+            border-radius: 3px;
+            font-size: 14px;
+            padding: 16px;
+            align-items: center;
+            border: 1px solid black;
+            background: lightgray;
+        }
+    }
+}
+
+.bar {
+    padding: 0 12px;
+    .col:first-of-type {
+        margin-right: 10px;
+    }
+    .form {
+        input {
+            min-height: 31px;
+        }
+        .button {
+            margin: 0;
+        }
+    }
+}
