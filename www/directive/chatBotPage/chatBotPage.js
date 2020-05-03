@@ -3,7 +3,7 @@ import templateStr from './chat-bot-page.html';
 export default [() => {
     return {
         template:templateStr,
-        controller: ['$scope','$http', ($scope,$http) => {
+        controller: ['$scope','$http','$timeout', ($scope,$http,$timeout) => {
 			$scope.form = {
 				input:''
             }
@@ -38,6 +38,9 @@ export default [() => {
             $scope.$watch('updatedResult',(nv,ov) => {
                 if(nv != ov && !nv.component) {
                     $scope.getNextResponse(nv.nextUnit);
+                    $timeout(()=>{
+                        $scope.annimateResponses = true
+                    },500);
                 };
             });
 

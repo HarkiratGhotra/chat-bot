@@ -9901,3 +9901,10 @@ a.button {
     min-height: 31px; }
   .bar .form .button {
     margin: 0; }
+
+.animate {
+  transition: 1s linear all;
+  opacity: 0; }
+
+.animate-show {
+  opacity: 1; }

@@ -13,8 +13,9 @@
         </div>
         <div class="col col-75"></div>
     </div>
-    <div class="row" 
-            ng-repeat="chat in chatList track by $index">
+    <div class="row animate" 
+            ng-repeat="chat in chatList track by $index"
+            ng-class="annimateResponses?'animate-show':''">
         <div class="col">
             {{chat}}
         </div>
