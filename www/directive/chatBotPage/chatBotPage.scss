@@ -36,3 +36,10 @@
         }
     }
 }
+.animate {
+    transition: 1s linear all;
+    opacity: 0;
+ }
+ .animate-show{
+    opacity: 1;
+ }
