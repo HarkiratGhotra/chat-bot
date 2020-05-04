@@ -23,3 +23,8 @@ npm-debug.log*
 /.sourcemaps
 /.versions
 /.vscode
+node_modules
+.idea
+platforms/
+plugins/
+resources

@@ -6,7 +6,7 @@
 import chatBotPage from '../directive/chatBotPage/chatBotPage';
 angular.module('starter', ['ionic'])
 
-.run(['$ionicPlatform',function($ionicPlatform) {
+.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs).
@@ -24,5 +24,5 @@ angular.module('starter', ['ionic'])
       StatusBar.styleDefault();
     }
   });
-}])
-.directive('chatBotPage',chatBotPage);
+})
+.directive('chatBotPage',chatBotPage)

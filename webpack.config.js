@@ -1,9 +1,10 @@
+const webpack = require('webpack');
 module.exports = {
     context: __dirname + '/www',
     entry: './js/app.js',
     output: {
         path: __dirname + '/www',
-        filename: 'bundle.js'
+        filename: 'main.js'
     },
     module: {
         rules: [
@@ -12,5 +13,12 @@ module.exports = {
             loader: 'html-loader',
           },
         ]
-    }
+    },
+    mode: "development",
+    devtool: 'true',
+        plugins: [
+            new webpack.SourceMapDevToolPlugin({
+                filename: '[name].js.map',
+            })
+        ]
 };
