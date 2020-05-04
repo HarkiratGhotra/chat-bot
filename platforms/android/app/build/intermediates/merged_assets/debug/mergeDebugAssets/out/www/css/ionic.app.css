@@ -9875,8 +9875,7 @@ a.button {
   transition-duration: 0s; }
 
 .reply {
-  flex-direction: row-reverse;
-  color: #fff; }
+  flex-direction: row-reverse; }
   .reply .col:first-of-type {
     background: green !important; }
 
@@ -9891,7 +9890,8 @@ a.button {
       font-size: 14px;
       padding: 16px;
       align-items: center;
-      border: 1px solid black; }
+      border: 1px solid black;
+      background: lightgray; }
 
 .bar {
   padding: 0 12px; }
