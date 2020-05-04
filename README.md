@@ -60,8 +60,11 @@ Angular Unknown Provider error for IONIC.BUNDLE.JS
 
 The Reason for that -> 
 ```bash
-The Error while running the Simulator is coming from lib/js/ionic.bundle.js (it is related to unknown provider AngularJs, inside that file). Tried different way to resolve that, but it is something I need to investigate again. 
+The Error while running the Simulator is coming from lib/js/ionic.bundle.js 
+(it is related to unknown provider AngularJs, inside that file). 
+Tried different way to resolve that, but it is something I need to investigate again. 
 
-Other Way I can think of resolving this is (not to use Webpack) and try to use "app.js" directly in Index.html. 
+Other Way I can think of resolving this is (not to use Webpack) 
+and try to use "app.js" directly in Index.html. 
 ```
 
