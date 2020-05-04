@@ -51,7 +51,7 @@ https://ionicframework.com/docs/developing/ios
 ```
 used "ionic cordova" to build and run simulator emulator
 
-### 4) ISSUES ->  Tried building the ionic App on Android Simulator
+### 5) ISSUES ->  Tried building the ionic App on Android Simulator
  
 after set up and running simulator, I got 
 ```bash
@@ -59,9 +59,9 @@ Angular Unknown Provider error for IONIC.BUNDLE.JS
 ```
 
 The Reason for that -> 
-
+```bash
 The Error while running the Simulator is coming from lib/js/ionic.bundle.js (it is related to unknown provider AngularJs, inside that file). Tried different way to resolve that, but it is something I need to investigate again. 
 
 Other Way I can think of resolving this is (not to use Webpack) and try to use "app.js" directly in Index.html. 
-
+```
 
