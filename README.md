@@ -21,8 +21,10 @@ nodemon <server.js> # it will run local server on 3000
 # To do the watch on sass file changes
 guelp watch
 ```
+### 3) DEMO on Browser
+https://www.youtube.com/watch?v=dfdnn89B56o
 
-### 3) Tried building the ionic App on Android Simulator
+### 4) Tried building the ionic App on Android Simulator
 Installed all the dependencies related to developing in Android. 
 use this link 
 https://ionicframework.com/docs/developing/android
