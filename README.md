@@ -21,21 +21,47 @@ nodemon <server.js> # it will run local server on 3000
 # To do the watch on sass file changes
 guelp watch
 ```
-### 3) DEMO on Browser
+### 3) DEMO Made on Browser (Had issues with Simulator)
+
+```bash
 https://www.youtube.com/watch?v=dfdnn89B56o
+```
 
-### 4) Tried building the ionic App on Android Simulator
-Installed all the dependencies related to developing in Android. 
-use this link 
+### 4) Documentation on Project and Android and Ios App Build
+
+First I completed this project in browser and made sure , everything is working as expected. 
+I used following technology to make this app :
+```bash
+  1) IONIC -> for getting start with IONIC
+  2) Webpack -> for making one Bundle file and I also wanted to use IMPORT feature so I choose webpack
+  3) AngularJs -> for version1
+  4) Gulp watch -> tracking down any sass ,css change
+```
+
+Android App Build :
+I installed all the dependencies and follow this link 
+```bash
 https://ionicframework.com/docs/developing/android
+```  
 
+IOS App Build: 
+Installed all the related dependecies and followed this link 
+```bash
+https://ionicframework.com/docs/developing/ios
+```
+used "ionic cordova" to build and run simulator emulator
+
+### 4) ISSUES ->  Tried building the ionic App on Android Simulator
+ 
 after set up and running simulator, I got 
 ```bash
 Angular Unknown Provider error for IONIC.BUNDLE.JS 
 ```
 
-I tried resolving that a lot, but it looks like something in min.js has something to do with AngularJs unknown tprovider
+The Reason for that -> 
 
-First I did set up to check the android progress and then I run android . Then I got error inside Simulator.
+The Error while running the Simulator is coming from lib/js/ionic.bundle.js (it is related to unknown provider AngularJs, inside that file). Tried different way to resolve that, but it is something I need to investigate again. 
 
-But in my local browser the App works fine
+Other Way I can think of resolving this is (not to use Webpack) and try to use "app.js" directly in Index.html. 
+
+
