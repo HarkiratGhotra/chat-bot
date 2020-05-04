@@ -21,5 +21,3 @@ nodemon <server.js> # it will run local server on 3000
 # To do the watch on sass file changes
 guelp watch
 ```
-### 3) Demo
-[![Watch the video](./finalDemomov.mov)]
