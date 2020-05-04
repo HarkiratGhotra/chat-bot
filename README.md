@@ -27,7 +27,12 @@ guelp watch
 https://www.youtube.com/watch?v=dfdnn89B56o
 ```
 
-### 4) Documentation on Project and Android and Ios App Build
+### 4) DEMO on IOS -> After resolving Simulator(AngularJs Issue)
+```bash
+  https://www.youtube.com/watch?v=J8JBdQmo7Mo&feature=youtu.be
+```
+
+### 5) Documentation on Project and Android and Ios App Build
 
 First I completed this project in browser and made sure , everything is working as expected. 
 I used following technology to make this app :
@@ -51,14 +56,14 @@ https://ionicframework.com/docs/developing/ios
 ```
 used "ionic cordova" to build and run simulator emulator
 
-### 5) ISSUES ->  Tried building the ionic App on Android Simulator
+~~### 5) ISSUES ->  Tried building the ionic App on Android Simulator(This issue has been resolved)
  
-after set up and running simulator, I got 
+~~after set up and running simulator, I got 
 ```bash
 Angular Unknown Provider error for IONIC.BUNDLE.JS 
 ```
 
-The Reason for that -> 
+~~The Reason for that -> 
 ```bash
 The Error while running the Simulator is coming from lib/js/ionic.bundle.js 
 (it is related to unknown provider AngularJs, inside that file). 
