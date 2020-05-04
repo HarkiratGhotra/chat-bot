@@ -56,14 +56,14 @@ https://ionicframework.com/docs/developing/ios
 ```
 used "ionic cordova" to build and run simulator emulator
 
-~~### 5) ISSUES ->  Tried building the ionic App on Android Simulator(This issue has been resolved)
+### 5) ISSUES ->  Tried building the ionic App on Android Simulator(This issue has been resolved)
  
-~~after set up and running simulator, I got 
+after set up and running simulator, I got 
 ```bash
 Angular Unknown Provider error for IONIC.BUNDLE.JS 
 ```
 
-~~The Reason for that -> 
+The Reason for that -> 
 ```bash
 The Error while running the Simulator is coming from lib/js/ionic.bundle.js 
 (it is related to unknown provider AngularJs, inside that file). 
