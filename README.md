@@ -29,9 +29,12 @@ https://www.youtube.com/watch?v=dfdnn89B56o
 
 ### 4) DEMO on IOS -> After resolving Simulator(AngularJs Issue)
 ```bash
+# to prepare the IOS 
+ionic cordova prepare ios
+# to run the app in IOS 
+ionic cordova run ios
   https://www.youtube.com/watch?v=J8JBdQmo7Mo&feature=youtu.be
 ```
-
 ### 5) Documentation on Project and Android and Ios App Build
 
 First I completed this project in browser and made sure , everything is working as expected. 
