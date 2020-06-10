@@ -33,6 +33,7 @@ https://www.youtube.com/watch?v=dfdnn89B56o
 ionic cordova prepare ios
 # to run the app in IOS 
 ionic cordova run ios
+# demo
   https://www.youtube.com/watch?v=J8JBdQmo7Mo&feature=youtu.be
 ```
 ### 5) Documentation on Project and Android and Ios App Build
